@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using VehicleRepo.Core.Application.Interfaces;
+using VehicleRepo.Core.Application.Services.EntityServices;
 using VehicleRepo.Core.Domain.Interfaces;
 using VehicleRepo.Core.Domain.Interfaces.Repositories;
 using VehicleRepo.Infrastructure.Database;
@@ -11,6 +13,8 @@ public static class DependencyInjections
 {
     public static IServiceCollection AddServicesAndRepositories(this IServiceCollection services)
     {
+        services.AddScoped<IVehicleService, VehicleService>();
+
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IVehicleRepository, VehicleRepository>();
 
