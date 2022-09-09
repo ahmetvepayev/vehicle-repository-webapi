@@ -27,6 +27,11 @@ public class VehicleService : PersistingServiceBase, IVehicleService
         return _vehicleRepository.GetAll();
     }
 
+    public List<Vehicle> GetAllByColor(string color)
+    {
+        return _vehicleRepository.FindAll(v => v.Color == color);
+    }
+
     public Vehicle GetById(int id)
     {
         return _vehicleRepository.GetById(id);

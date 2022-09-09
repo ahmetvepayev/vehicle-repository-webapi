@@ -34,6 +34,11 @@ public class BusService : PersistingServiceBase, IBusService
         return _busRepository.GetAll();
     }
 
+    public List<Bus> GetAllByColor(string color)
+    {
+        return _busRepository.FindAll(b => b.Color == color);
+    }
+
     public Bus GetById(int id)
     {
         return _busRepository.GetById(id);

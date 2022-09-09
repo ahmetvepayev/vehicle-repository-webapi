@@ -34,6 +34,11 @@ public class CarService : PersistingServiceBase, ICarService
         return _carRepository.GetAll();
     }
 
+    public List<Car> GetAllByColor(string color)
+    {
+        return _carRepository.FindAll(c => c.Color == color);
+    }
+
     public Car GetById(int id)
     {
         return _carRepository.GetById(id);

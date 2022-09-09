@@ -34,6 +34,11 @@ public class BoatService : PersistingServiceBase, IBoatService
         return _boatRepository.GetAll();
     }
 
+    public List<Boat> GetAllByColor(string color)
+    {
+        return _boatRepository.FindAll(b => b.Color == color);
+    }
+
     public Boat GetById(int id)
     {
         return _boatRepository.GetById(id);

@@ -33,6 +33,12 @@ public class VehicleController : ControllerBase
         return Ok(_vehicleService.GetById(id));
     }
 
+    [HttpGet("color/{color}")]
+    public IActionResult GetVehiclesByColor(string color)
+    {
+        return Ok(_vehicleService.GetAllByColor(color));
+    }
+
     [HttpDelete("{id}")]
     public IActionResult DeleteVehicle(int id)
     {
@@ -51,6 +57,12 @@ public class VehicleController : ControllerBase
     public IActionResult GetCarById(int id)
     {
         return Ok(_carService.GetById(id));
+    }
+
+    [HttpGet("cars/color/{color}")]
+    public IActionResult GetCarsByColor(string color)
+    {
+        return Ok(_carService.GetAllByColor(color));
     }
 
     [HttpPost("cars")]
@@ -89,6 +101,12 @@ public class VehicleController : ControllerBase
         return Ok(_busService.GetById(id));
     }
 
+    [HttpGet("buses/color/{color}")]
+    public IActionResult GetBusesByColor(string color)
+    {
+        return Ok(_busService.GetAllByColor(color));
+    }
+
     [HttpPost("buses")]
     public IActionResult AddBus(Bus addedBus)
     {
@@ -115,6 +133,12 @@ public class VehicleController : ControllerBase
     public IActionResult GetBoatById(int id)
     {
         return Ok(_boatService.GetById(id));
+    }
+
+    [HttpGet("boats/color/{color}")]
+    public IActionResult GetBoatsByColor(string color)
+    {
+        return Ok(_boatService.GetAllByColor(color));
     }
 
     [HttpPost("boats")]
