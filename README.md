@@ -15,6 +15,7 @@ You need to install [Docker Engine](https://docs.docker.com/engine/install/) and
 + Clone the repository or download the source code
 + Open a terminal window from the folder containing the ```docker-compose.yml``` file or navigate to that folder on your terminal
 + Execute ```docker-compose up -d``` to start the application. Docker will automatically download all the necessary files required for the application and will set up a separate container for the PostgreSQL server
++ When you're done with the application, execute ```docker-compose down --rmi all --volumes``` to shut down the containers and remove all files associated with the application
 
 Alternatively, you can use any other PostgreSQL server instead of hosting it on a Docker container. You will probably need to change the connection string in [appsettings.json](/src/VehicleRepo.Api/appsettings.json) in case you opt to use a different server
 
