@@ -42,7 +42,15 @@ public class CarService : PersistingServiceBase, ICarService
     public void SwitchHeadlights(int id, string headlights)
     {
         var alteredCar = _carRepository.GetById(id);
-        alteredCar.HeadlightsAreOn = (headlights == "on");
+        switch(headlights)
+        {
+            case "on":
+                alteredCar.HeadlightsAreOn = true;
+                break;
+            case "off":
+                alteredCar.HeadlightsAreOn = false;
+                break;
+        }
 
         _unitOfWork.SaveChanges();
     }

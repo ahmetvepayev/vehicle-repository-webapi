@@ -15,10 +15,14 @@ public static class DependencyInjections
     {
         services.AddScoped<IVehicleService, VehicleService>();
         services.AddScoped<ICarService, CarService>();
+        services.AddScoped<IBusService, BusService>();
+        services.AddScoped<IBoatService, BoatService>();
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IVehicleRepository, VehicleRepository>();
         services.AddScoped<ICarRepository, CarRepository>();
+        services.AddScoped<IBusRepository, BusRepository>();
+        services.AddScoped<IBoatRepository, BoatRepository>();
 
         return services;
     }
