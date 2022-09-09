@@ -14,9 +14,11 @@ public static class DependencyInjections
     public static IServiceCollection AddServicesAndRepositories(this IServiceCollection services)
     {
         services.AddScoped<IVehicleService, VehicleService>();
+        services.AddScoped<ICarService, CarService>();
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IVehicleRepository, VehicleRepository>();
+        services.AddScoped<ICarRepository, CarRepository>();
 
         return services;
     }
