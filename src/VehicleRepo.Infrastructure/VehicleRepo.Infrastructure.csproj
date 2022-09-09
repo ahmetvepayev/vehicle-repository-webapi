@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\VehicleRepo.Core\Application\VehicleRepo.Application.csproj" />
+    <ProjectReference Include="..\VehicleRepo.Core\Application\VehicleRepo.Core.Application.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

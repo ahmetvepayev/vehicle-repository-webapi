@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VehicleRepo.Infrastructure\VehicleRepo.Infrastructure.csproj" />
-    <ProjectReference Include="..\VehicleRepo.Core\Application\VehicleRepo.Application.csproj" />
+    <ProjectReference Include="..\VehicleRepo.Core\Application\VehicleRepo.Core.Application.csproj" />
   </ItemGroup>
 
 </Project>

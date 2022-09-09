@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRepo.Infrastructure"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VehicleRepo.Core", "VehicleRepo.Core", "{5B68ED16-D92A-461D-9BB6-2B5143767A81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRepo.Domain", "VehicleRepo.Core\Domain\VehicleRepo.Domain.csproj", "{3A0DFBC5-B632-42D7-8FDA-047AEC5B6641}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRepo.Domain", "VehicleRepo.Core\Domain\VehicleRepo.Core.Domain.csproj", "{3A0DFBC5-B632-42D7-8FDA-047AEC5B6641}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRepo.Application", "VehicleRepo.Core\Application\VehicleRepo.Application.csproj", "{3832A6C8-9F85-4259-9200-0DF2145C8C8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRepo.Application", "VehicleRepo.Core\Application\VehicleRepo.Core.Application.csproj", "{3832A6C8-9F85-4259-9200-0DF2145C8C8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
