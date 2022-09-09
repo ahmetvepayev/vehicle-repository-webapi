@@ -13,6 +13,8 @@ builder.Services.AddServicesAndRepositories();
 
 builder.Services.AddDatabase(builder.Configuration);
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

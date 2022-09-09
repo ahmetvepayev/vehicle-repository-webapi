@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRepo.Domain", "Vehic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRepo.Application", "VehicleRepo.Core\Application\VehicleRepo.Core.Application.csproj", "{3832A6C8-9F85-4259-9200-0DF2145C8C8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRepo.Utility", "VehicleRepo.Utility\VehicleRepo.Utility.csproj", "{D52F5BFC-8819-49F8-BBF3-154C70BD64DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{3832A6C8-9F85-4259-9200-0DF2145C8C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3832A6C8-9F85-4259-9200-0DF2145C8C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3832A6C8-9F85-4259-9200-0DF2145C8C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D52F5BFC-8819-49F8-BBF3-154C70BD64DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52F5BFC-8819-49F8-BBF3-154C70BD64DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52F5BFC-8819-49F8-BBF3-154C70BD64DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52F5BFC-8819-49F8-BBF3-154C70BD64DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3A0DFBC5-B632-42D7-8FDA-047AEC5B6641} = {5B68ED16-D92A-461D-9BB6-2B5143767A81}

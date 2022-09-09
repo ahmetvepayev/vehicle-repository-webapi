@@ -1,12 +1,13 @@
-using VehicleRepo.Core.Domain.Entities;
+using VehicleRepo.Core.Application.Dtos.ApiModelWrappers;
+using VehicleRepo.Core.Application.Dtos.EntityDtos.BusDtos;
 
 namespace VehicleRepo.Core.Application.Interfaces;
 
 public interface IBusService
 {
-    List<Bus> GetAll();
-    Bus GetById(int id);
-    List<Bus> GetAllByColor(string color);
-    void Add(Bus bus);
-    void Delete(int id);
+    ObjectResponse<List<BusGetResponse>> GetAll();
+    ObjectResponse<BusGetResponse> GetById(int id);
+    ObjectResponse<List<BusGetResponse>> GetAllByColor(string color);
+    StatusResponse Add(BusAddRequest request);
+    StatusResponse Delete(int id);
 }

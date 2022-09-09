@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+using VehicleRepo.Api.Extensions;
+using VehicleRepo.Core.Application.Dtos.EntityDtos.BoatDtos;
+using VehicleRepo.Core.Application.Dtos.EntityDtos.BusDtos;
+using VehicleRepo.Core.Application.Dtos.EntityDtos.CarDtos;
 using VehicleRepo.Core.Application.Interfaces;
-using VehicleRepo.Core.Domain.Entities;
 
 namespace VehicleRepo.Api.Controllers;
 
@@ -24,136 +27,160 @@ public class VehicleController : ControllerBase
     [HttpGet]
     public IActionResult GetAllVehicles()
     {
-        return Ok(_vehicleService.GetAll());
+        var response = _vehicleService.GetAll();
+
+        return response.GetActionResult();
     }
 
     [HttpGet("{id}")]
     public IActionResult GetVehicleById(int id)
     {
-        return Ok(_vehicleService.GetById(id));
+        var response = _vehicleService.GetById(id);
+
+        return response.GetActionResult();
     }
 
     [HttpGet("color/{color}")]
     public IActionResult GetVehiclesByColor(string color)
     {
-        return Ok(_vehicleService.GetAllByColor(color));
+        var response = _vehicleService.GetAllByColor(color);
+
+        return response.GetActionResult();
     }
 
     [HttpDelete("{id}")]
     public IActionResult DeleteVehicle(int id)
     {
-        _vehicleService.Delete(id);
+        var response = _vehicleService.Delete(id);
 
-        return Ok();
+        return response.GetActionResult();
     }
 
     [HttpGet("cars")]
     public IActionResult GetAllCars()
     {
-        return Ok(_carService.GetAll());
+        var response = _carService.GetAll();
+
+        return response.GetActionResult();
     }
 
     [HttpGet("cars/{id}")]
     public IActionResult GetCarById(int id)
     {
-        return Ok(_carService.GetById(id));
+        var response = _carService.GetById(id);
+
+        return response.GetActionResult();
     }
 
     [HttpGet("cars/color/{color}")]
     public IActionResult GetCarsByColor(string color)
     {
-        return Ok(_carService.GetAllByColor(color));
+        var response = _carService.GetAllByColor(color);
+
+        return response.GetActionResult();
     }
 
     [HttpPost("cars")]
-    public IActionResult AddCar(Car addedCar)
+    public IActionResult AddCar(CarAddRequest request)
     {
-        _carService.Add(addedCar);
+        var response = _carService.Add(request);
 
-        return Ok();
+        return response.GetActionResult();
     }
 
     [HttpDelete("cars/{id}")]
     public IActionResult DeleteCar(int id)
     {
-        _carService.Delete(id);
+        var response = _carService.Delete(id);
 
-        return Ok();
+        return response.GetActionResult();
     }
 
     [HttpPost("cars/{id}")]
     public IActionResult SwitchCarHeadlights(int id, string headlights)
     {
-        _carService.SwitchHeadlights(id, headlights);
+        var response = _carService.SwitchHeadlights(id, headlights);
 
-        return Ok();
+        return response.GetActionResult();
     }
 
     [HttpGet("buses")]
     public IActionResult GetAllBuses()
     {
-        return Ok(_busService.GetAll());
+        var response = _busService.GetAll();
+
+        return response.GetActionResult();
     }
 
     [HttpGet("buses/{id}")]
     public IActionResult GetBusById(int id)
     {
-        return Ok(_busService.GetById(id));
+        var response = _busService.GetById(id);
+
+        return response.GetActionResult();
     }
 
     [HttpGet("buses/color/{color}")]
     public IActionResult GetBusesByColor(string color)
     {
-        return Ok(_busService.GetAllByColor(color));
+        var response = _busService.GetAllByColor(color);
+
+        return response.GetActionResult();
     }
 
     [HttpPost("buses")]
-    public IActionResult AddBus(Bus addedBus)
+    public IActionResult AddBus(BusAddRequest request)
     {
-        _busService.Add(addedBus);
+        var response = _busService.Add(request);
 
-        return Ok();
+        return response.GetActionResult();
     }
 
     [HttpDelete("buses/{id}")]
     public IActionResult DeleteBus(int id)
     {
-        _busService.Delete(id);
+        var response = _busService.Delete(id);
 
-        return Ok();
+        return response.GetActionResult();
     }
 
     [HttpGet("boats")]
     public IActionResult GetAllBoats()
     {
-        return Ok(_boatService.GetAll());
+        var response = _boatService.GetAll();
+
+        return response.GetActionResult();
     }
 
     [HttpGet("boats/{id}")]
     public IActionResult GetBoatById(int id)
     {
-        return Ok(_boatService.GetById(id));
+        var response = _boatService.GetById(id);
+
+        return response.GetActionResult();
     }
 
     [HttpGet("boats/color/{color}")]
     public IActionResult GetBoatsByColor(string color)
     {
-        return Ok(_boatService.GetAllByColor(color));
+        var response = _boatService.GetAllByColor(color);
+
+        return response.GetActionResult();
     }
 
     [HttpPost("boats")]
-    public IActionResult AddBoat(Boat addedBoat)
+    public IActionResult AddBoat(BoatAddRequest request)
     {
-        _boatService.Add(addedBoat);
+        var response = _boatService.Add(request);
 
-        return Ok();
+        return response.GetActionResult();
     }
 
     [HttpDelete("boats/{id}")]
     public IActionResult DeleteBoat(int id)
     {
-        _boatService.Delete(id);
+        var response = _boatService.Delete(id);
 
-        return Ok();
+        return response.GetActionResult();
     }
 }
